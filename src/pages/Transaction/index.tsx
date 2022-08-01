@@ -14,5 +14,5 @@ export const Transaction = () => {
   const { transactionId } = useParams<Record<string, string | undefined>>();
   console.log(transactionId);
 
-  return <h1 className="text-white">Transação</h1>;
+  return <h1 className="">Transação</h1>;
 };

@@ -13,5 +13,6 @@ import { useUser } from '../../providers/UserProvider';
 export const Profile = () => {
   const { user } = useUser();
 
-  return <h1 className="text-white">{user?.name}</h1>;
+  // return <h1 className="">{user?.name}</h1>;
+  return <h1 className="">perfil do usuario</h1>;
 };

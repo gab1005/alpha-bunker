@@ -9,5 +9,5 @@
  */
 
 export const Transfer = () => {
-  return <h1 className="text-white">Transferência</h1>;
+  return <h1 className="">Transferência</h1>;
 };

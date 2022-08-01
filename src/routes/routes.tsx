@@ -2,6 +2,7 @@ import { ReactElement } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import { useUser } from '../providers/UserProvider';
 
+// chamo as paginas como componentes
 import { Home } from '../pages/Home';
 import { Extract } from '../pages/Extract';
 import { Transfer } from '../pages/Transfer';
@@ -9,6 +10,10 @@ import { Deposit } from '../pages/Deposit';
 import { Withdraw } from '../pages/Withdraw';
 import { Profile } from '../pages/Profile';
 import { Transaction } from '../pages/Transaction';
+
+// chamar as duas paginas que eu criei
+import { TestePagina01, TestePagina02 } from '../pages/testes-page';
+import { HomeFake } from '../pages/HomeFake';
 
 interface ChildrenTypes {
   children: ReactElement;
@@ -28,15 +33,54 @@ const Public = ({ children }: ChildrenTypes) => {
   const { user } = useUser();
 
   if (user) {
-    return <Navigate to="/deposit" />;
+    // return <Navigate to="/deposit" />;
+    return <Navigate to="/homefake" />;
   }
 
   return children;
 };
 
 export const Router = () => (
+  // path é o "apelido", o componente Pagina que foi importado em cima, é desenhado
   <Routes>
     <Route path="/" element={<Navigate to="/home" />} />
+
+    <Route
+      path="/homefake"
+      element={
+        <Private>
+          <HomeFake />
+        </Private>
+      }
+    />
+
+    <Route
+      path="/home"
+      element={
+        <Private>
+          <Home />
+        </Private>
+      }
+    />
+
+    <Route
+      path="/page01"
+      element={
+        <Private>
+          <TestePagina01 />
+        </Private>
+      }
+    />
+
+    <Route
+      path="/page02"
+      element={
+        <Private>
+          <TestePagina02 />
+        </Private>
+      }
+    />
+
     <Route
       path="/home"
       element={
@@ -45,6 +89,7 @@ export const Router = () => (
         </Public>
       }
     />
+
     <Route
       path="/deposit"
       element={

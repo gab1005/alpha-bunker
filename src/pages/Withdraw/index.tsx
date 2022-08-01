@@ -9,5 +9,5 @@
  */
 
 export const Withdraw = () => {
-  return <h1 className="text-white">Saque</h1>;
+  return <h1 className="">Saque</h1>;
 };

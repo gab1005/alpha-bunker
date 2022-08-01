@@ -14,23 +14,24 @@ import { api } from '../../libs/api';
  */
 
 export const Deposit = () => {
-  const [modal, setModal] = useState(false);
+  // const [modal, setModal] = useState(false);
 
-  async function handleDeposit() {
-    try {
-      const result = await api.post('deposit', {
-        agency: '',
-        account: '',
-        value: '',
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  }
+  // async function handleDeposit() {
+  //   try {
+  //     const result = await api.post('deposit', {
+  //       agency: '',
+  //       account: '',
+  //       value: '',
+  //     });
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
 
   return (
     <>
-      {modal && (
+      <h2>Deposito</h2>
+      {/* {modal && (
         <Modal
           title="Depósito"
           setModal={setModal}
@@ -53,7 +54,7 @@ export const Deposit = () => {
           label="Abrir modal"
           onClick={() => setModal(true)}
         />
-      </div>
+      </div> */}
     </>
   );
 };

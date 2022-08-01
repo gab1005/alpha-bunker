@@ -2,13 +2,13 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '../Button';
 
 /**
- * Archive: src/caminho
+ * Archive: src/components/testes-components/pagina01.tsx
  *
- * Description: descrição qualquer
+ * Description: componente que navega para 'pag02', feitos para testes em desenvolvimento
  *
- * Date: ano/mes/dia
+ * Date: 2022/07/31
  *
- * Author: ...........
+ * Author: Gabriel de Sousa (gab1005)
  */
 
 export const Pagina01 = () => {

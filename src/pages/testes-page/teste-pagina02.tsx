@@ -1,13 +1,13 @@
 import { Pagina02 } from '../../components/testes-components';
 
 /**
- * Archive: src/caminho
+ * Archive: src/pages/testes-page/teste-pagina02.tsx
  *
- * Description: descrição qualquer
+ * Description: pagina feita para testes em desenvolvimento, navega para 'testes-pagina01'
  *
- * Date: ano/mes/dia
+ * Date: 2022/07/31
  *
- * Author: ...........
+ * Author: Gabriel de Sousa (gab1005)
  */
 
 export const TestePagina02 = () => {

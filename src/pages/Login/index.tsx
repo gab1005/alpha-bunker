@@ -19,10 +19,14 @@ import { BgContainer } from '../../components/bgContainer';
 export const Login = () => {
   // const { loading } = useUser();
 
+  // px
+  // fonte= 16px => fonte=24px
+  // rem (elemento base/ pai todos body hmlt) = em (primeiro pai dele
+
   return (
     <BgContainer>
       <img src={path} alt="porta de entrada" className="w-12 mb-4" />
-      <p className="text-brand-base hover:text-brand-hover font-medium text-5 leading-6 mb-14 ">
+      <p className="text-brand-base hover:text-brand-hover font-medium text-5 leading- mb-14 ">
         Alpha bunker
       </p>
 

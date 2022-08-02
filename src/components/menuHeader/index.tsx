@@ -12,6 +12,7 @@ import cifrao from '../../assets/icons/main-icons/R$-sifrao.svg';
 
 interface Type {
   className?: string;
+  userName?: string;
   agencia?: string;
   conta?: string;
   saldo?: string;
@@ -29,6 +30,7 @@ interface Type {
 
 export const MenuHeader = ({
   className,
+  userName = 'Dhesem',
   agencia = '1510-5',
   conta = '95785-3',
   saldo = '132.759,30',
@@ -39,7 +41,7 @@ export const MenuHeader = ({
     >
       <div className="w-[285px] h-[44px] flex flex-row flex-nowrap justify-between mx-auto mt-[14px] py-2.5 mb-[1.1em]">
         <p className="font-medium text-5 leading-6 text-header-light">
-          Bem Vindo, UserName
+          Bem Vindo, {userName}
         </p>
 
         <img src={iconUser} alt="icone-user" className="w-5" />
@@ -59,10 +61,10 @@ export const MenuHeader = ({
           <img src={arrowDown} alt="seta para baixo" />
         </div>
 
-        <div className="flex flex-row flex-nowrap justify-start items-center gap-1 ml-4">
+        <div className="flex flex-row flex-nowrap justify-start items-center gap-1 ml-4 text-brand-base font-bold text-[1.5em] leading-[29px] ">
           <img src={ocultarSaldo} alt="ocultar saldo" />
           <p>{saldo}</p>
-          <img src={cifrao} alt="cifrão" />
+          <img src={cifrao} alt="cifrão" className="mt-2" />
         </div>
       </div>
     </div>

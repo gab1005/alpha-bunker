@@ -1,13 +1,24 @@
+import React from 'react';
+import { MainIcons } from '../../components/mainIcons';
+import { BgContainer } from '../../components/bgContainer';
+import { MenuHeader } from '../../components/menuHeader';
+
 /**
- * Archive: src/pages/Extract.tsx
+ * Archive: src/pages/Extract/index.tsx
  *
- * Description: Extract page
+ * Description: extrato do usuario
  *
- * Date: 2022/07/20
+ * Date: 2022/07/01
  *
- * Author: Rey
+ * Author: Gabriel de Sousa (gab1005)
  */
 
 export const Extract = () => {
-  return <h1 className="">Extrato</h1>;
+  return (
+    <BgContainer className="">
+      <MenuHeader className="" />
+
+      <p className="mt-4">container info </p>
+    </BgContainer>
+  );
 };

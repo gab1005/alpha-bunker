@@ -14,6 +14,8 @@ import { Transaction } from '../pages/Transaction';
 // chamar as duas paginas que eu criei
 import { TestePagina01, TestePagina02 } from '../pages/testes-page';
 import { HomeFake } from '../pages/HomeFake';
+import { Login } from '../pages/Login';
+import { Cadastro } from '../pages/Cadastro';
 
 interface ChildrenTypes {
   children: ReactElement;
@@ -23,7 +25,7 @@ const Private = ({ children }: ChildrenTypes) => {
   const { user } = useUser();
 
   if (!user) {
-    return <Navigate to="/home" />;
+    return <Navigate to="/cadastro" />;
   }
 
   return children;
@@ -43,7 +45,7 @@ const Public = ({ children }: ChildrenTypes) => {
 export const Router = () => (
   // path é o "apelido", o componente Pagina que foi importado em cima, é desenhado
   <Routes>
-    <Route path="/" element={<Navigate to="/home" />} />
+    <Route path="/" element={<Navigate to="/homefake" />} />
 
     <Route
       path="/homefake"
@@ -59,6 +61,24 @@ export const Router = () => (
       element={
         <Private>
           <Home />
+        </Private>
+      }
+    />
+
+    <Route
+      path="/login"
+      element={
+        <Private>
+          <Login />
+        </Private>
+      }
+    />
+
+    <Route
+      path="/cadastro"
+      element={
+        <Private>
+          <Cadastro />
         </Private>
       }
     />
@@ -80,6 +100,8 @@ export const Router = () => (
         </Private>
       }
     />
+
+    {/*  */}
 
     <Route
       path="/home"
@@ -132,6 +154,6 @@ export const Router = () => (
     />
     <Route path="/transaction/:transactionId" element={<Transaction />} />
 
-    <Route path="*" element={<h1 className="text-white">Error 404</h1>} />
+    <Route path="*" element={<h1 className="">Error 404</h1>} />
   </Routes>
 );

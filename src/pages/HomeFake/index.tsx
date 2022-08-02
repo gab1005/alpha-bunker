@@ -17,7 +17,7 @@ export const HomeFake = () => {
   return (
     <div className="flex flex-col justify-center items-center gap-2 bg-blue-300 w-screen h-screen">
       <h2 className="text-2xl text-neutral-700">lista de paginas do projeto</h2>
-      <div className="flex flex-row flex-wrap justify-start items-center gap-2 bg-red-300 w-[90%] h-[50%] rounded-md p-2">
+      <div className="flex flex-row flex-wrap justify-start items-center gap-2 bg-red-300 w-[90%] h-[70%] rounded-md p-2">
         <div className="w-full flex flex-row justify-evenly">
           <Button
             label="page01"
@@ -29,6 +29,20 @@ export const HomeFake = () => {
             label="page02"
             category="primary"
             onClick={() => navigate('/page02')}
+          />
+        </div>
+
+        <div className="w-full flex flex-row justify-evenly">
+          <Button
+            label="login"
+            category="primary"
+            onClick={() => navigate('/login')}
+          />
+
+          <Button
+            label="cadastro"
+            category="primary"
+            onClick={() => navigate('/cadastro')}
           />
         </div>
 

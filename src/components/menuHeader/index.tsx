@@ -47,7 +47,7 @@ export const MenuHeader = ({
         <img src={iconUser} alt="icone-user" className="w-5" />
       </div>
 
-      <div className="flex flex-row flex-nowrap justify-center items-center">
+      <div className="flex flex-row flex-nowrap justify-center items-center gap-x-[0.625em]">
         <MainIcons image={extrato} subTitle="Extrato" />
         <MainIcons image={transferir} subTitle="Transferir" />
         <MainIcons image={sacar} subTitle="Sacar" />

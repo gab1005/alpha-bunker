@@ -40,6 +40,7 @@ export const Login = () => {
           placeholder="Digite seu CPF"
           category="default"
           descriptionBottom="testes descrição"
+          className="px-3 py-2"
         />
 
         {/* <input type="text" placeholder="Digite sua senha" /> */}
@@ -48,6 +49,7 @@ export const Login = () => {
           placeholder="Digite sua senha"
           category="default"
           descriptionBottom="placeholder"
+          className="px-3 py-2"
         />
         <Button
           category="primary"

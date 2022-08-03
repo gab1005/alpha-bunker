@@ -1,45 +1,11 @@
-import React, {
-  JSXElementConstructor,
-  ReactElement,
-  useEffect,
-  useState,
-} from 'react';
-
 interface PropTypes {
   category: 'default' | 'filled' | 'error';
   type?: 'text' | 'number';
-  classNameInput?: string;
-  classNameText?: string;
+  className?: string;
   placeholder?: string;
   descriptionBottom?: string;
   children?: JSX.Element | JSX.Element[];
-  // function?: (category: string, descriptionBottom: string) => ReactElement;
 }
-
-// function ChangeTypeInput(category: string, descriptionBottom: string): string {
-//   // | 'filled' | 'error'
-//   const [Element, setElement]: any = useState('');
-
-//   if (category == 'default') {
-//     setElement('');
-//   }
-//   if (category == 'filled') {
-//     setElement(`
-//       <p className="h-3 text-[0.6875em] p-0 m-0 text-input-inactive ">
-//         {descriptionBottom}
-//       </p>,
-//     `);
-//   }
-//   if (category == 'error') {
-//     setElement(`
-//       <p className="h-3 text-[0.6875em] p-0 m-0 text-input-error ">
-//         Este campo é requirido
-//       </p>,
-//     `);
-//   }
-
-//   return Element;
-// }
 
 /**
  * Archive: src/pages/Home.tsx
@@ -58,7 +24,7 @@ interface PropTypes {
 export const Input = ({
   category,
   type = 'text',
-  classNameInput,
+  className,
   placeholder,
   descriptionBottom = '',
   children,
@@ -69,17 +35,11 @@ export const Input = ({
         type={type}
         placeholder={placeholder}
         className={`
-        ${classNameInput}
+        w-64 h-8 text-input-text bg-input-base border-input-border border-2 rounded-[5px] m-0 text-1 leading-[1.1875em]
         ${category}
-        w-64 h-8 text-input-text bg-input-base border-input-border border-2 rounded-[5px] px-3 py-2 m-0 text-1 leading-[1.1875em]
+        ${className}
         `}
       />
-
-      {/* <p className="h-3 text-[0.6875em] p-0 m-0 text-input-inactive ">
-        {descriptionBottom}
-      </p> */}
-
-      {/* {ChangeTypeInput(category, descriptionBottom)} */}
     </div>
   );
 };

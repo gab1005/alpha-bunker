@@ -3,6 +3,15 @@ import { Button } from '../../components/Button';
 import { Modal } from '../../components/Modal';
 import { api } from '../../libs/api';
 
+import { Input } from '../../components/input';
+import { BgContainer } from '../../components/bgContainer';
+import { MainContainer } from '../../components/mainContainer';
+import { MenuHeader } from '../../components/menuHeader';
+import { TransactionHeader } from '../../components/TransactionHeader';
+
+import deposito from '../../assets/icons/container-icons/depositar-container.svg';
+import sino from '../../assets/icons/container-icons/sino-container.svg';
+
 /**
  * Archive: src/pages/Deposit.tsx
  *
@@ -14,47 +23,32 @@ import { api } from '../../libs/api';
  */
 
 export const Deposit = () => {
-  // const [modal, setModal] = useState(false);
-
-  // async function handleDeposit() {
-  //   try {
-  //     const result = await api.post('deposit', {
-  //       agency: '',
-  //       account: '',
-  //       value: '',
-  //     });
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
-
   return (
-    <>
-      <h2>Deposito</h2>
-      {/* {modal && (
-        <Modal
-          title="Depósito"
-          setModal={setModal}
-          handleConfirmModal={handleDeposit}
+    <BgContainer>
+      <MenuHeader />
+
+      <MainContainer
+        title="Deposito"
+        icon={deposito}
+        iconSino={sino}
+        className="mt-[70%]"
+      >
+        <TransactionHeader
+          type="reading"
+          title="Dados para saque"
+          agencia="1510-5"
+          conta="95785-3"
         />
-      )}
-      <div className="flex flex-col gap-5">
+
+        <Input category="default" placeholder="Valor" />
+        <Input category="default" placeholder="Senha" />
+
         <Button
           category="primary"
-          label="Abrir modal"
-          onClick={() => setModal(true)}
+          label="Sacar"
+          onClick={() => console.log('sacar')}
         />
-        <Button
-          category="secondary"
-          label="Abrir modal"
-          onClick={() => setModal(true)}
-        />
-        <Button
-          category="cancel"
-          label="Abrir modal"
-          onClick={() => setModal(true)}
-        />
-      </div> */}
-    </>
+      </MainContainer>
+    </BgContainer>
   );
 };

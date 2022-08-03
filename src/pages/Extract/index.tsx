@@ -2,6 +2,8 @@ import React from 'react';
 import { BgContainer } from '../../components/bgContainer';
 import { MenuHeader } from '../../components/menuHeader';
 import { MainContainer } from '../../components/mainContainer';
+import extrato from '../../assets/icons/container-icons/extrato-container.svg';
+import sino from '../../assets/icons/container-icons/sino-container.svg';
 
 /////
 interface Type {
@@ -85,20 +87,50 @@ export const Extract = ({
     <BgContainer className="">
       <MenuHeader className="" />
 
-      <MainContainer className="bg-red-500 mt-40">
-        {arrayData.map((elem) => {
-          return (
-            <div key={elem.id}>
-              <h2>{elem.date}</h2>
+      <MainContainer
+        title="Extrato"
+        icon={extrato}
+        iconSino={sino}
+        className="mt-[40%]"
+      >
+        <div className="w-[auto] h-[196px] bg-[#F3F9F9] mx-4 rounded-[0.25em] flex flex-col flex-nowrap gap-5">
+          {arrayData.map((elem) => {
+            return (
+              <div key={elem.id} className="">
+                {/* data da transação */}
+                <h2 className="ml-1 text-input-placeholder font-medium text-[14px] leading-4">
+                  {elem.date}
+                </h2>
 
-              <div>
-                <p>{elem.dataTransacao.tipo} </p>
-                <p>{elem.dataTransacao.valor} </p>
+                {/* tipo valor */}
+                <div className="flex flex-row flex-nowrap justify-between mx-3">
+                  <p className="text-input-inactive font-medium text-[14px] leadgin-4">
+                    {elem.dataTransacao.tipo}
+                  </p>
+
+                  <p
+                    className={`text-input-error font-bold text-[14px] leading-4 ${styleValor(
+                      elem.dataTransacao.valor,
+                    )}`}
+                  >
+                    {elem.dataTransacao.valor}
+                  </p>
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </MainContainer>
     </BgContainer>
   );
+};
+
+// devolve estilo 'vermelho' ou 'verde' para a cor do valor.
+const styleValor = (valor: string) => {
+  if (valor.charAt(0) == '-') {
+    return 'text-input-error';
+  }
+  if (valor.charAt(0) == '+') {
+    return 'text-[#53D496]';
+  }
 };

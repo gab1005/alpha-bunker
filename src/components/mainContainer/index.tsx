@@ -1,131 +1,49 @@
 interface Type {
   className?: string;
+  title?: string;
+  icon?: string;
+  iconSino?: string;
   children?: any;
 }
 
-export const MainContainer = ({ className, children }: Type) => {
+/**
+ * Archive: src/components/mainContainer/index.tsx
+ *
+ * Description: componente que cria a 'caixa' padrão usada nas paginas principais (extrato, sauque, deposito, transferencia).
+ *
+ * Date: 2022/07/02
+ *
+ * Author: Gabriel de Sousa
+ */
+
+//py-[12px] px[15px] gap-[25px]
+// h-[264px] w-[314px]
+//mt-[70%]
+
+export const MainContainer = ({
+  className,
+  title,
+  icon,
+  iconSino,
+  children,
+}: Type) => {
   return (
     <div
-      className={`${className} w-[290px] h-[290px] bg-white flex flex-col flex-nowrap justify-center items-center py-[12px] px[15px] gap-[25px]`}
+      className={`${className} w-[284px] h-[auto] bg-white flex flex-col flex-nowrap rounded-lg  pb-3`}
     >
+      {/* title container */}
+      <div className="flex flex-row justify-between mt-3 mx-3 mb-6 text-header-gold font-medium text-[1em] leading-[1.25em] ">
+        <div className="flex flex-row gap-2">
+          <img src={icon} alt="casa-ouro" className="w-5" />
+
+          <p> {title} </p>
+        </div>
+
+        <img src={iconSino} alt="sino" className="w-3" />
+      </div>
+
+      {/* conteudo */}
       {children}
     </div>
   );
 };
-
-/**
- * interface Type {
-  className?: string;
-  date?: string;
-  tipoTransferencia?: string;
-  valor?: string;
-  // key?: number;
-  // arrayData: object[];
-}
-
-interface Acount {
-  agencia: string;
-  conta: string;
-}
-
-interface TypeArray {
-  id: number;
-  date: string;
-  dataTransacao: {
-    tipo: string;
-    valor: string;
-    origin: Acount;
-    destino: Acount;
-  };
-}
-
-const arrayData: TypeArray[] = [
-  {
-    id: 1,
-    date: '07/07/2022',
-    dataTransacao: {
-      tipo: 'Deposito',
-      valor: '+$50,30',
-      origin: {
-        agencia: '1510-5',
-        conta: '95785-3',
-      },
-      destino: {
-        agencia: '2020-4',
-        conta: '10210-2',
-      },
-    },
-  },
-  {
-    id: 2,
-    date: '02/06/2022',
-    dataTransacao: {
-      tipo: 'Saque',
-      valor: '-$150,30',
-      origin: {
-        agencia: '1510-5',
-        conta: '95785-3',
-      },
-      destino: {
-        agencia: '1510-5',
-        conta: '95785-3',
-      },
-    },
-  },
-];
- */
-
-// {arrayData.map((elem) => {
-//   return (
-//     <div key={elem.id}>
-//       <h2></h2>
-//       <p></p>
-//     </div>
-//   );
-// })}
-
-/**
- * <div>
-        <img src="" alt="casa de ouro" />
-        <p>Extrato de transações</p>
-        <img src="" alt="sino" />
-      </div>
-
-      <div>
-        <h2>{data}</h2>
-
-        <div>
-          <p>Transfência enviada</p>
-          <p>{valor}</p>
-        </div>
-
-        <div>
-          <p>Saque</p>
-          <p>{valor}</p>
-        </div>
-
-        <div>
-          <p>Depósito</p>
-          <p>{valor}</p>
-        </div>
-
-        <div>
-          <p>Transferência recebida</p>
-          <p>{valor}</p>
-        </div>
-      </div>
-
-      <div>
-        <h2>{data}</h2>
-
-        <div>
-          <p>{tipoTransferencia}</p>
-          <p>{valor}</p>
-        </div>
-
-        <div>
-          <p>{tipoTransferencia}</p>
-          <p>{valor}</p>
-        </div>
-      </div>
- */

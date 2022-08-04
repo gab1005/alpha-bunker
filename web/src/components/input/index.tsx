@@ -7,7 +7,8 @@ interface PropTypes {
   descriptionBottom?: string;
   children?: JSX.Element | JSX.Element[];
   value: string;
-  onChange: KeyboardEventHandler<any>;
+  // onChange: KeyboardEventHandler<any>;
+  onChange: (value: any) => void;
   // onChange: React.ChangeEvent<HTMLInputElement>;
   // onChange: any;
 }
@@ -31,6 +32,8 @@ export const Input = ({
   type = 'text',
   className,
   placeholder,
+  value,
+  onChange,
   descriptionBottom = '',
   children,
 }: PropTypes) => {
@@ -39,6 +42,8 @@ export const Input = ({
       <input
         type={type}
         placeholder={placeholder}
+        value={value}
+        onChange={onChange}
         className={`
         w-64 h-8 text-input-text bg-input-base border-input-border border-2 rounded-[5px] m-0 text-1 leading-[1.1875em]
         ${category}

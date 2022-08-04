@@ -5,12 +5,14 @@ export const TestInput = () => {
 
   const handleValue = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
-    // const lastLetter: EventListenerOrEventListenerObject = e.nativeEvent.data;
-    // console.log(value + lastLetter);
-    console.log(value + e.target.defaultValue);
-    console.log('');
-    console.log(e);
-    console.log(e.target);
+
+    // const lastLetter: any = e.nativeEvent.data;
+    console.log(value);
+
+    // console.log(value + e.target.defaultValue);
+    // console.log('');
+    // console.log(e.);
+    // console.log(e.target);
   };
 
   return (

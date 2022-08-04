@@ -38,7 +38,9 @@ const typeHeader = (props: Type): any => {
 
   if (props.type == 'reading') {
     return (
-      <div className={props.className}>
+      // px-4 flex flex-col gap-y-4
+      //px-4 mb-4
+      <div className={`${props.className}  flex flex-col`}>
         <p className="text-paragraph-dark text-4 leadin-5 mb-2">
           {props.title}
         </p>

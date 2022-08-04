@@ -7,6 +7,15 @@ import { MainContainer } from '../../components/mainContainer';
 import imgBanke from '../../assets/images/image-login.png';
 import { api } from '../../libs/api';
 
+// const cors=require("cors");
+// const corsOptions ={
+//    origin:'*',
+//    credentials:true,
+//    optionSuccessStatus:200,
+// }
+
+// app.use(cors(corsOptions))
+
 interface UserType {
   name: string;
   birth_date: string;
@@ -64,7 +73,12 @@ export const Cadastro = () => {
     console.log(user);
 
     try {
-      const result = await api.post('cadastro', user);
+      const config = {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+      };
+      const result = await api.post('accounts', user, config);
     } catch (err) {
       console.log(err);
     }

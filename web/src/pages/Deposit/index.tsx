@@ -47,7 +47,7 @@ export const Deposit = ({ agencia = '1510-5', conta = '95785-3' }: Type) => {
         title="Deposito"
         icon={deposito}
         iconSino={sino}
-        className="mt-[70%]"
+        className="mt-[50%] gap-y-4 px-4"
       >
         <TransactionHeader
           type="reading"

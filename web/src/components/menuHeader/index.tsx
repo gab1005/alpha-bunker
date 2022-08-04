@@ -1,4 +1,4 @@
-import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { MainIcons } from '../mainIcons';
 
 import extrato from '../../assets/icons/main-icons/extrato.svg';
@@ -35,6 +35,8 @@ export const MenuHeader = ({
   conta = '95785-3',
   saldo = '132.759,30',
 }: Type) => {
+  const navigate = useNavigate();
+
   return (
     <div
       className={`${className} w-[22.5em] h-[13em] bg-[#337782] rounded-b-[25px] fixed top-0`}

@@ -45,7 +45,7 @@ export const Withdraw = ({ agencia = '1510-5', conta = '95785-3' }: Type) => {
         icon={saque}
         title="Saque"
         iconSino={sino}
-        className="mt-[50%]"
+        className="mt-[50%] gap-y-4 px-4"
       >
         <TransactionHeader
           type="reading"

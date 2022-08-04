@@ -70,7 +70,9 @@ export const Transfer = ({
         title="Transferência"
         iconSino={sino}
         className="mt-[70%]"
+        classNameTitle="mb-4"
       >
+        {/* gap-y-4 */}
         <div className="px-4 flex flex-col gap-y-4">
           <TransactionHeader
             type="reading"
@@ -94,7 +96,7 @@ export const Transfer = ({
               <div>
                 <Input
                   category="default"
-                  className="w-[4.5em] text-input-text text-4 leading-5 px-2 py-2"
+                  className="w-[5em] text-input-text text-4 leading-5 px-2 py-2"
                   value={dAgencia}
                   onChange={(e) => setDAgencia(e.target.value)}
                 />
@@ -108,8 +110,7 @@ export const Transfer = ({
               <div>
                 <Input
                   category="default"
-                  placeholder=""
-                  className="w-[4.5em] text-input-text text-4 leading-5 px-2 py-2"
+                  className="w-[5em] text-input-text text-4 leading-5 px-2 py-2"
                   value={dConta}
                   onChange={(e) => setDConta(e.target.value)}
                 />

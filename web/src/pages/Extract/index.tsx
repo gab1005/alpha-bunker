@@ -91,7 +91,7 @@ export const Extract = ({
         title="Extrato"
         icon={extrato}
         iconSino={sino}
-        className="mt-[40%]"
+        className="mt-[40%] gap-y-4"
       >
         <div className="w-[auto] h-[196px] bg-[#F3F9F9] mx-4 rounded-[0.25em] flex flex-col flex-nowrap gap-5">
           {arrayData.map((elem) => {

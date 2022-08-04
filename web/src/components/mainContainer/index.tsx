@@ -1,5 +1,6 @@
 interface Type {
   className?: string;
+  classNameTitle?: string;
   title?: string;
   icon?: string;
   iconSino?: string;
@@ -22,6 +23,7 @@ interface Type {
 
 export const MainContainer = ({
   className,
+  classNameTitle,
   title,
   icon,
   iconSino,
@@ -29,10 +31,13 @@ export const MainContainer = ({
 }: Type) => {
   return (
     <div
-      className={`${className} w-[284px] h-[auto] bg-white flex flex-col flex-nowrap rounded-lg  pb-3`}
+      className={`${className} w-[284px] h-[auto] bg-white flex flex-col flex-nowrap rounded-lg pb-3`}
     >
       {/* title container */}
-      <div className="flex flex-row justify-between mt-3 mx-3 mb-6 text-header-gold font-medium text-[1em] leading-[1.25em] ">
+      {/* mb-6 */}
+      <div
+        className={`flex flex-row justify-between mt-3 mx-3 ${classNameTitle} text-header-gold font-medium text-[1em] leading-[1.25em]`}
+      >
         <div className="flex flex-row gap-2">
           <img src={icon} alt="casa-ouro" className="w-5" />
 

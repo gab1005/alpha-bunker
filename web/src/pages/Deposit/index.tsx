@@ -13,8 +13,8 @@ import deposito from '../../assets/icons/container-icons/depositar-container.svg
 import sino from '../../assets/icons/container-icons/sino-container.svg';
 
 interface Type {
-  agencia: string;
-  conta: string;
+  agencia?: string;
+  conta?: string;
 }
 
 /**

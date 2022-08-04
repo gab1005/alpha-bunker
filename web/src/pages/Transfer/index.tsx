@@ -10,10 +10,10 @@ import transferencia from '../../assets/icons/container-icons/transferencia-cont
 import sino from '../../assets/icons/container-icons/sino-container.svg';
 
 interface Type {
-  OriAgencia: string;
-  OriConta: string;
-  DesAgencia: string;
-  DesConta: string;
+  OriAgencia?: string;
+  OriConta?: string;
+  DesAgencia?: string;
+  DesConta?: string;
 }
 
 /**

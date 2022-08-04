@@ -4,6 +4,7 @@ interface Types {
   subTitle: string;
   classNameImage?: string;
   classNameText?: string;
+  onClick?: () => void;
 }
 
 /**
@@ -22,6 +23,7 @@ export const MainIcons = (props: Types) => {
   return (
     <div className=" m-0 p-0 box-border">
       <button
+        onClick={props.onClick}
         className={`${props.classNameImage} w-[54px] h-[46px] mb-[9px] bg-[#75ACB1] flex justify-center items-center rounded-[5px] m-0 p-0`}
       >
         <img src={props.image} alt={props.imageAlt} />

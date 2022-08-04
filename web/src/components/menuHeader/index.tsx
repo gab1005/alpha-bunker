@@ -12,6 +12,7 @@ import cifrao from '../../assets/icons/main-icons/R$-sifrao.svg';
 
 interface Type {
   className?: string;
+  onClick?: () => void;
   userName?: string;
   agencia?: string;
   conta?: string;
@@ -30,6 +31,7 @@ interface Type {
 
 export const MenuHeader = ({
   className,
+  onClick,
   userName = 'Dhesem',
   agencia = '1510-5',
   conta = '95785-3',
@@ -50,10 +52,26 @@ export const MenuHeader = ({
       </div>
 
       <div className="flex flex-row flex-nowrap justify-center items-center gap-x-[0.625em]">
-        <MainIcons image={extrato} subTitle="Extrato" />
-        <MainIcons image={transferir} subTitle="Transferir" />
-        <MainIcons image={sacar} subTitle="Sacar" />
-        <MainIcons image={depositar} subTitle="Depositar" />
+        <MainIcons
+          image={extrato}
+          subTitle="Extrato"
+          onClick={() => navigate('/extract')}
+        />
+        <MainIcons
+          image={transferir}
+          subTitle="Transferir"
+          onClick={() => navigate('/Transfer')}
+        />
+        <MainIcons
+          image={sacar}
+          subTitle="Sacar"
+          onClick={() => navigate('/withdraw')}
+        />
+        <MainIcons
+          image={depositar}
+          subTitle="Depositar"
+          onClick={() => navigate('/deposit')}
+        />
       </div>
       {/* mt-9 */}
       <div className="relative top-9 bg-white w-[18em] h-16 rounded-[10px] mx-auto flex flex-col justify-center items-stretch ">

@@ -1,3 +1,4 @@
+import React, { KeyboardEventHandler, useState } from 'react';
 interface PropTypes {
   category: 'default' | 'filled' | 'error';
   type?: 'text' | 'number';
@@ -5,6 +6,10 @@ interface PropTypes {
   placeholder?: string;
   descriptionBottom?: string;
   children?: JSX.Element | JSX.Element[];
+  value: string;
+  onChange: KeyboardEventHandler<any>;
+  // onChange: React.ChangeEvent<HTMLInputElement>;
+  // onChange: any;
 }
 
 /**

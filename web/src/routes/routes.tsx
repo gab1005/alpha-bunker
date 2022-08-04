@@ -16,6 +16,7 @@ import { TestePagina01, TestePagina02 } from '../pages/testes-page';
 import { HomeFake } from '../pages/HomeFake';
 import { Login } from '../pages/Login';
 import { Cadastro } from '../pages/Cadastro';
+import { TestInput } from '../pages/test-input';
 
 interface ChildrenTypes {
   children: ReactElement;
@@ -61,6 +62,15 @@ export const Router = () => (
       element={
         <Private>
           <Home />
+        </Private>
+      }
+    />
+
+    <Route
+      path="/test-input"
+      element={
+        <Private>
+          <TestInput />
         </Private>
       }
     />

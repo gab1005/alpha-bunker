@@ -6,9 +6,9 @@ interface PropTypes {
   placeholder?: string;
   descriptionBottom?: string;
   children?: JSX.Element | JSX.Element[];
-  value: string;
+  value?: string;
   // onChange: KeyboardEventHandler<any>;
-  onChange: (value: any) => void;
+  onChange?: (value: any) => void;
   // onChange: React.ChangeEvent<HTMLInputElement>;
   // onChange: any;
 }

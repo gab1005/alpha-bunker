@@ -6,6 +6,7 @@ import path from '../../assets/images/image-login.png';
 import { MainContainer } from '../../components/mainContainer';
 import imgBanke from '../../assets/images/image-login.png';
 import { api } from '../../libs/api';
+
 interface UserType {
   name: string;
   birth_date: string;

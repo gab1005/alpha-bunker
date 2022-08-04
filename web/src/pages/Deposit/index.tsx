@@ -12,6 +12,11 @@ import { TransactionHeader } from '../../components/TransactionHeader';
 import deposito from '../../assets/icons/container-icons/depositar-container.svg';
 import sino from '../../assets/icons/container-icons/sino-container.svg';
 
+interface Type {
+  agencia: string;
+  conta: string;
+}
+
 /**
  * Archive: src/pages/Deposit.tsx
  *
@@ -22,7 +27,18 @@ import sino from '../../assets/icons/container-icons/sino-container.svg';
  * Author: Rey
  */
 
-export const Deposit = () => {
+export const Deposit = ({ agencia = '1510-5', conta = '95785-3' }: Type) => {
+  const [valor, setValor] = useState('');
+  const [senha, setSenha] = useState('');
+
+  const handleData = () => {
+    const data = {
+      valor: valor,
+      senha: senha,
+    };
+    return data;
+  };
+
   return (
     <BgContainer>
       <MenuHeader />
@@ -36,17 +52,27 @@ export const Deposit = () => {
         <TransactionHeader
           type="reading"
           title="Dados para saque"
-          agencia="1510-5"
-          conta="95785-3"
+          agencia={agencia}
+          conta={conta}
         />
 
-        <Input category="default" placeholder="Valor" />
-        <Input category="default" placeholder="Senha" />
+        <Input
+          category="default"
+          placeholder="Valor"
+          value={valor}
+          onChange={(e) => setValor(e.target.value)}
+        />
+        <Input
+          category="default"
+          placeholder="Senha"
+          value={senha}
+          onChange={(e) => setSenha(e.target.value)}
+        />
 
         <Button
           category="primary"
           label="Sacar"
-          onClick={() => console.log('sacar')}
+          onClick={() => console.log(handleData())}
         />
       </MainContainer>
     </BgContainer>

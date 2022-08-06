@@ -13,7 +13,7 @@ interface Types {
  *
  * Date: 2022/07/01
  *
- * Author: Gabriel de Sousa (gab1005)
+ * Author: Alehff
  */
 
 export const BgContainer = ({

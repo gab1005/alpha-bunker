@@ -22,7 +22,7 @@ interface Type {
  *
  * Date: 2022/07/20
  *
- * Author: Rey
+ * Author: Alehff
  */
 
 // falta fecahr os margins e paddings dos components.

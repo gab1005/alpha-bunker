@@ -72,6 +72,7 @@ export const Cadastro = () => {
     };
     console.log(user);
 
+    // tentando conectar com backend
     try {
       const config = {
         headers: {
@@ -142,11 +143,12 @@ export const Cadastro = () => {
         category="primary"
         label="Cadastrar"
         onClick={() => console.log(handleValue())}
+        className="mt-4"
       />
       <Button
-        category="secondary"
         label="Entrar"
         onClick={() => console.log('entrar')}
+        className="w-20 h-8 -mt-2 bg-transparent text-[#353535] text-4 leading-4 "
       />
     </BgContainer>
   );

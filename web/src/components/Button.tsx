@@ -2,7 +2,7 @@ import { MouseEventHandler } from 'react';
 
 interface PropTypes {
   className?: string;
-  category: 'primary' | 'secondary' | 'cancel';
+  category?: 'primary' | 'secondary' | 'cancel';
   label: string;
   type?: 'button' | 'submit';
   onClick: MouseEventHandler<HTMLButtonElement>;

@@ -14,10 +14,8 @@ interface Types {
  *
  * Date: 2022/07/01
  *
- * Author: Gabriel de Sousa (gab1005)
+ * Author: Alehff
  */
-
-// w-[70px] h-[54px]
 
 export const MainIcons = (props: Types) => {
   return (

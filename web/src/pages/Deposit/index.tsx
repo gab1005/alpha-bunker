@@ -24,7 +24,7 @@ interface Type {
  *
  * Date: 2022/07/20
  *
- * Author: Rey
+ * Author: Alehff
  */
 
 export const Deposit = ({ agencia = '1510-5', conta = '95785-3' }: Type) => {
